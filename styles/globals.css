@@ -1,16 +1,112 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap");
 
-a {
-  color: inherit;
-  text-decoration: none;
+.mont {
+  font-family: "Montserrat";
 }
-
-* {
-  box-sizing: border-box;
+.quote {
+  font-family: "Rajdhani";
+}
+.indigo-900 {
+  background-color: rgb(255, 255, 255);
+}
+.txt-indigo-900 {
+  color: rgb(5, 14, 20);
+}
+.indigo-800 {
+  background-color: rgb(29, 15, 44);
+}
+.indigo-700 {
+  color: rgb(40, 16, 66);
+}
+.indigo-600 {
+  color: rgb(53, 18, 90);
+}
+.fuchsia {
+  color: rgb(255, 208, 0);
+}
+.gold-200 {
+  color: rgba(255, 208, 0, 0.808);
+}
+.gold-600 {
+  color: rgba(255, 187, 0, 0.87);
+}
+.bg-gold {
+  background-color: rgba(255, 196, 0, 0.904);
+}
+.bg-fuchsia {
+  background-color: fuchsia;
+}
+.sky-400 {
+  color: rgb(36, 143, 185);
+}
+.sky-600 {
+  color: rgb(21, 61, 77);
+}
+.bg-sky-600 {
+  background-color: rgb(21, 61, 77);
+}
+.bg-sky-400 {
+  background-color: rgb(36, 143, 185);
+}
+.bg-sky-200 {
+  background-color: rgb(36, 143, 185);
+}
+.bg-sky-100 {
+  background-color: rgb(69, 171, 211);
+}
+.sky-100 {
+  color: rgb(119, 210, 246);
+}
+.php {
+  background-image: url("../public/images/php.png");
+  width: 100%;
+  background-size: cover;
+  border-radius: 50%;
+}
+.node {
+  background-image: url("../public/images/nodejs.svg");
+  width: 100%;
+  background-size: cover;
+  border-radius: 50%;
+}
+.py {
+  background-image: url("../public/images/python.png");
+  width: 100%;
+  background-size: cover;
+  border-radius: 50%;
+}
+.sql {
+  background-image: url("../public/images/sql.png");
+  width: 100%;
+  background-size: cover;
+  border-radius: 50%;
+}
+.css {
+  background-image: url("../public/images/css.png");
+  width: 100%;
+  background-size: cover;
+  border-radius: 50%;
+}
+.html {
+  background-image: url("../public/images/html-5.png");
+  width: 100%;
+  background-size: cover;
+  border-radius: 50%;
+}
+.js {
+  background-image: url("../public/images/javascript.png");
+  width: 100%;
+  background-size: cover;
+  border-radius: 50%;
+}
+.git {
+  background-image: url("../public/images/github.png");
+  width: 100%;
+  background-size: cover;
+  border-radius: 50%;
 }
