@@ -13,6 +13,9 @@ const Navbar = ({ css, items }) => {
         <Link href="/skills">
           <a className={items}>Skills</a>
         </Link>
+        <Link href="/project">
+          <a className={items}>Project</a>
+        </Link>
         <Link href="/contact">
           <a className={items}>Contact</a>
         </Link>

@@ -7,11 +7,32 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 
 const About = () => {
+  const global = {
+    hidden: {
+      opacity: 0,
+      transition: { staggerChildren: 0.5 },
+    },
+    show: {
+      opacity: 1,
+      transition: { duration: 0.2, staggerChildren: 0.5 },
+    },
+  };
+  const moveUp = {
+    hidden: {
+      opacity: 0,
+      y: "10%",
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.2 }}
+      variants={global}
+      initial="hidden"
+      animate="show"
       className="h-screen indigo-900"
     >
       <Navbar
@@ -20,7 +41,15 @@ const About = () => {
       />
       <div className="w-10/12 mx-auto mt-24" id="about">
         <Title>About me</Title>
-        <div className="flex">
+        <motion.div
+          variants={moveUp}
+          initial="hidden"
+          animate="show"
+          className="flex"
+        >
+          <div className="px-4">
+            <Image src={about} />
+          </div>
           <div className="w-3/5">
             <p className="block mont border border-gray-100 rounded-xl p-8 leading-10 text-lg text-justify">
               Hello again!
@@ -76,10 +105,7 @@ const About = () => {
               </a>
             </div>
           </div>
-          <div className="px-4">
-            <Image src={about} />
-          </div>
-        </div>
+        </motion.div>
       </div>
     </motion.div>
   );

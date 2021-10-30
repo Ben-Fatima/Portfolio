@@ -45,7 +45,7 @@ const Leading = () => {
             </motion.button>
           </div>
           <motion.div
-            className="w-1/2 text-white mt-24"
+            className="w-1/2 text-white mt-24 hidden lg:block"
             animate={{ y: ["5%", "-5%"] }}
             transition={{
               repeatType: "reverse",

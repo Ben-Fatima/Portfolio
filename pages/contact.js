@@ -9,10 +9,47 @@ import Navbar from "../components/Navbar";
 import { useState } from "react";
 
 function Contact() {
+  const [page, setPage] = useState("form");
+  return (
+    <div className="w-full">
+      <div className="">
+        <AnimatePresence exitBeforeEnter>
+          {page === "form" && <Form setPage={setPage} />}
+          {page === "sent" && <Sent />}
+        </AnimatePresence>
+      </div>
+    </div>
+  );
+}
+export default Contact;
+
+function Form({ setPage }) {
+  const global = {
+    hidden: {
+      opacity: 0,
+      transition: { staggerChildren: 0.5 },
+    },
+    show: {
+      opacity: 1,
+      transition: { duration: 0.2, staggerChildren: 0.5 },
+    },
+  };
+  const moveUp = {
+    hidden: {
+      opacity: 0,
+      y: "10%",
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
   const [submitted, setSubmitted] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
@@ -29,18 +66,21 @@ function Contact() {
     });
     const resJSON = await res.json();
     console.log("The response is:", resJSON);
+
     setSubmitted(true);
     setSubject("");
     setEmail("");
     setMessage("");
-    console.log(data);
+    setPage("sent");
+    console.log(email);
   };
+
   return (
     <AnimatePresence exitBeforeEnter>
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.2 }}
+        variants={global}
+        initial="hidden"
+        animate="show"
         className="indigo-900"
       >
         <Navbar
@@ -49,7 +89,12 @@ function Contact() {
         />
         <div className="w-10/12 mx-auto mt-20">
           <Title>get in touch</Title>
-          <div className="flex shadow-lg rounded-xl border border-gray-100 mont">
+          <motion.div
+            variants={moveUp}
+            initial="hidden"
+            animate="show"
+            className="flex shadow-lg rounded-xl border border-gray-100 mont"
+          >
             <div className="w-1/3 bg-sky-600 rounded-l-xl text-white pb-6">
               <h2 className="fuchsia text-2xl mont  w-full text-center mt-10">
                 Contact informations
@@ -63,7 +108,7 @@ function Contact() {
                 <SocialMedia css="flex mt-8 text-lg text-white" />
               </div>
             </div>
-            <div className="w-2/3 rounded-r-xl pb-6">
+            <form onSubmit={handleSubmit} className="w-2/3 rounded-r-xl pb-6">
               <h2 className="text-2xl mont w-full sky-600 text-center mt-10">
                 Send me message
               </h2>
@@ -76,6 +121,7 @@ function Contact() {
                   onChange={(e) => {
                     setEmail(e.target.value);
                   }}
+                  required
                 />
                 <label className="block">Subject</label>
                 <input
@@ -85,6 +131,7 @@ function Contact() {
                   onChange={(e) => {
                     setSubject(e.target.value);
                   }}
+                  required
                 />
                 <label className="block">Message</label>
                 <textarea
@@ -94,6 +141,7 @@ function Contact() {
                   onChange={(e) => {
                     setMessage(e.target.value);
                   }}
+                  required
                 />
                 <motion.button
                   whileHover={{
@@ -104,20 +152,27 @@ function Contact() {
                   }}
                   className="bg-gold rounded-3xl px-8 sky-600 mont mt-12 focus:outline-none"
                   type="submit"
-                  onClick={(e) => {
-                    handleSubmit(e);
-                  }}
                 >
                   <p className="px-1 inline-block">Send</p>
                   <FontAwesomeIcon icon={faPaperPlane} />
                 </motion.button>
               </div>
-            </div>
-          </div>
+            </form>
+          </motion.div>
         </div>
       </motion.div>
     </AnimatePresence>
   );
 }
 
-export default Contact;
+const Sent = () => {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3 }}
+    >
+      yopii
+    </motion.div>
+  );
+};
