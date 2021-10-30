@@ -17,16 +17,13 @@ const Leading = () => {
       transition={{ duration: 0.2 }}
       className="indigo-900 h-screen"
     >
-      <Navbar
-        css="sticky top-0 z-10 w-full p-4 bg-sky-600"
-        items="px-6 mont inline-block fuchsia hover:text-blue-100"
-      />
+      <Navbar />
       <div className="w-full pb-10">
-        <div className="w-10/12 flex mx-auto mt-14">
-          <div className="w-1/2">
+        <div className="w-11/12 lg:w-10/12 flex mx-auto mt-14">
+          <div className="w-full text-center lg:w-1/2 lg:text-left">
             <Header />
             <Quote />
-            <SocialMedia css="flex mt-8 text-lg sky-600" />
+            <SocialMedia css="flex mt-12 text-center sky-600" />
             <motion.button
               whileHover={{
                 scale: 1.05,
@@ -34,7 +31,7 @@ const Leading = () => {
                 color: "white",
                 backgroundColor: "rgba(218, 167, 0, 0.904)",
               }}
-              className="bg-gold py-2 px-4 rounded-3xl sky-600 mont mt-12 focus:outline-none"
+              className="w-11/12 lg:w-1/2 bg-gold py-2 px-4 rounded-3xl sky-600 mont mt-12 focus:outline-none"
             >
               <Link href="/contact">
                 <a>

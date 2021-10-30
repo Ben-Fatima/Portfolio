@@ -87,32 +87,35 @@ function Form({ setPage }) {
           css="sticky top-0 z-10 w-full p-4 bg-sky-600"
           items="px-6 mont inline-block fuchsia hover:text-blue-100"
         />
-        <div className="w-10/12 mx-auto mt-20">
+        <div className="w-11/12 lg:w-10/12 mx-auto mt-6 indigo-900">
           <Title>get in touch</Title>
           <motion.div
             variants={moveUp}
             initial="hidden"
             animate="show"
-            className="flex shadow-lg rounded-xl border border-gray-100 mont"
+            className="lg:flex mt-4 shadow-lg rounded-xl border border-gray-100 mont"
           >
-            <div className="w-1/3 bg-sky-600 rounded-l-xl text-white pb-6">
-              <h2 className="fuchsia text-2xl mont  w-full text-center mt-10">
+            <div className="w-full lg:w-1/3 bg-sky-600 rounded-tl-xl rounded-tr-xl lg:rounded-r-none lg:rounded-l-xl text-white pb-6">
+              <h2 className="fuchsia text-2xl mont  w-full text-center pt-4">
                 Contact informations
               </h2>
-              <div className="w-2/3 mx-auto mt-16">
+              <div className="w-9/12 mx-auto lg:w-2/3 mx-auto mt-4 lg:mt-16">
                 <p className="leading-10">
                   <FontAwesomeIcon icon={faPhone} /> +212 628785646
                   <br />
                   <FontAwesomeIcon icon={faMailBulk} /> fatimazahranit@gmail.com
                 </p>
-                <SocialMedia css="flex mt-8 text-lg text-white" />
+                <SocialMedia css="flex w-full mt-8 text-lg text-white" />
               </div>
             </div>
-            <form onSubmit={handleSubmit} className="w-2/3 rounded-r-xl pb-6">
+            <form
+              onSubmit={handleSubmit}
+              className="w-full lg:w-2/3 rounded-r-xl pb-6"
+            >
               <h2 className="text-2xl mont w-full sky-600 text-center mt-10">
                 Send me message
               </h2>
-              <div className="w-1/2 mx-auto leading-10 mont mt-4">
+              <div className="w-9/12 lg:w-1/2 mx-auto leading-10 mont mt-4">
                 <label className="block">Email</label>
                 <input
                   value={email}
@@ -150,7 +153,7 @@ function Form({ setPage }) {
                     color: "white",
                     backgroundColor: "rgba(218, 167, 0, 0.904)",
                   }}
-                  className="bg-gold rounded-3xl px-8 sky-600 mont mt-12 focus:outline-none"
+                  className="w-full mx-auto bg-gold rounded-3xl px-8 sky-600 mont mt-12 focus:outline-none"
                   type="submit"
                 >
                   <p className="px-1 inline-block">Send</p>

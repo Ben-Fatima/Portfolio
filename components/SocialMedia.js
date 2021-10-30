@@ -6,25 +6,25 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 const SocialMedia = ({ css }) => {
   return (
     <div className={css}>
-      <div className="px-3">
+      <div className="px-10 xl:px-4">
         <FontAwesomeIcon
           className="hover:text-yellow-500 cursor-pointer"
           icon={faGithub}
         />
       </div>
-      <div className="px-3">
+      <div className="px-10 xl:px-4">
         <FontAwesomeIcon
           className="hover:text-yellow-500 cursor-pointer"
           icon={faStackOverflow}
         />
       </div>
-      <div className="px-3">
+      <div className="px-10 xl:px-4">
         <FontAwesomeIcon
           className="hover:text-yellow-500 cursor-pointer"
           icon={faLinkedin}
         />
       </div>
-      <div className="px-3">
+      <div className="px-10 xl:px-4">
         <FontAwesomeIcon
           className="hover:text-yellow-500 cursor-pointer"
           icon={faYoutube}

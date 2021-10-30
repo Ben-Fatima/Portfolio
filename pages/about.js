@@ -39,18 +39,18 @@ const About = () => {
         css="sticky top-0 z-10 w-full p-4 bg-sky-600"
         items="px-6 mont inline-block fuchsia hover:text-blue-100"
       />
-      <div className="w-10/12 mx-auto mt-24" id="about">
+      <div className="w-11/12 mt-6 lg:w-10/12 mx-auto lg:mt-24" id="about">
         <Title>About me</Title>
         <motion.div
           variants={moveUp}
           initial="hidden"
           animate="show"
-          className="flex"
+          className="lg:flex"
         >
-          <div className="px-4">
+          <div className="mx-auto px-4">
             <Image src={about} />
           </div>
-          <div className="w-3/5">
+          <div className="lg:w-3/5">
             <p className="block mont border border-gray-100 rounded-xl p-8 leading-10 text-lg text-justify">
               Hello again!
               <motion.div
@@ -95,7 +95,7 @@ const About = () => {
                     boxShadow: "0px 0px 12px rgb(255,255,255)",
                     backgroundColor: "rgb(17, 46, 58)",
                   }}
-                  className="bg-sky-600 py-2 px-4 rounded-3xl text-white mont mt-12 focus:outline-none"
+                  className="w-full lg:w-1/2 mb-4 bg-sky-600 py-2 px-4 rounded-3xl text-white mont mt-12 focus:outline-none"
                 >
                   <p className="inline-block">Download resume</p>
                   <div className="px-1 inline-block">

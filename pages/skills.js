@@ -37,14 +37,11 @@ function Skills() {
       initial="hidden"
       animate="show"
     >
-      <Navbar
-        css="sticky top-0 z-10 w-full p-4 bg-sky-600"
-        items="px-6 mont inline-block fuchsia hover:text-blue-100"
-      />
-      <div className="w-10/12 mx-auto mt-8 indigo-900" id="skills">
+      <Navbar />
+      <div className="w-11/12 lg:w-10/12 mx-auto mt-6 indigo-900" id="skills">
         <Title value="skills">My skills</Title>
-        <div className="grid grid-cols-4 grid-rows-2 mx-auto w-10/12 gap-8">
-          <div className="mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
+        <div className="pb-4 grid xl:grid-cols-4 md:grid-cols-2 mx-auto mt-4 w-11/12 lg:gap-8">
+          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
             <div className="w-24 container mx-auto py-4">
               <div className="php w-24 h-24" />
             </div>
@@ -71,7 +68,7 @@ function Skills() {
               </ul>
             </div>
           </div>
-          <div className="mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
+          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
             <div className="w-24 container mx-auto py-4">
               <div className="node w-24 h-24" />
             </div>
@@ -107,7 +104,7 @@ function Skills() {
               </ul>
             </div>
           </div>
-          <div className="mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
+          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
             <div className="w-24 container mx-auto py-4">
               <div className="py w-24 h-24" />
             </div>
@@ -134,7 +131,7 @@ function Skills() {
               </ul>
             </div>
           </div>
-          <div className="mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
+          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
             <div className="w-24 container mx-auto py-4">
               <div className="js w-24 h-24" />
             </div>
@@ -152,7 +149,7 @@ function Skills() {
               </ul>
             </div>
           </div>
-          <div className="mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
+          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
             <div className="w-24 container mx-auto py-4">
               <div className="html w-24 h-24" />
             </div>
@@ -170,7 +167,7 @@ function Skills() {
               </ul>
             </div>
           </div>
-          <div className="mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
+          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
             <div className="w-24 container mx-auto py-4">
               <div className="css w-24 h-24" />
             </div>
@@ -188,7 +185,7 @@ function Skills() {
               </ul>
             </div>
           </div>
-          <div className="mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
+          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
             <div className="w-24 container mx-auto py-4">
               <div className="sql w-24 h-24" />
             </div>
@@ -215,7 +212,7 @@ function Skills() {
               </ul>
             </div>
           </div>
-          <div className="mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
+          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
             <div className="w-24 container mx-auto py-4">
               <div className="git w-24 h-24" />
             </div>
