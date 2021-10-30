@@ -48,7 +48,7 @@ const About = () => {
           className="lg:flex"
         >
           <div className="mx-auto px-4">
-            <Image src={about} />
+            <Image src={about} alt="about me" />
           </div>
           <div className="lg:w-3/5">
             <p className="block mont border border-gray-100 rounded-xl p-8 leading-10 text-lg text-justify">
@@ -84,8 +84,8 @@ const About = () => {
               related to computer science, with a passion for creating clean
               code.
               <br /> Other than coding, I spend most of my free time doing video
-              animation on my youtube channel. 📚 I've also been trying to read
-              more so feel free to reach out to me with any book
+              animation on my youtube channel. 📚 I have also been trying to
+              read more so feel free to reach out to me with any book
               recommendations!
             </p>
             <div className="">
