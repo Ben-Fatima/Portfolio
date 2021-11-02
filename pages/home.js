@@ -23,7 +23,7 @@ const Leading = () => {
           <div className="w-full text-center lg:w-1/2 lg:text-left">
             <Header />
             <Quote />
-            <SocialMedia css="flex mt-12 text-center sky-600" />
+            <SocialMedia css="flex mt-12 text-center lg:text-2xl lg:w-1/2 lg:justify-around sky-600" />
             <motion.button
               whileHover={{
                 scale: 1.05,

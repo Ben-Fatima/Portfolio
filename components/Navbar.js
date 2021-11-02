@@ -21,7 +21,7 @@ const Navbar = () => {
         </Link>
         <Link href="/project">
           <a className="lg:px-6 mont inline-block fuchsia hover:text-blue-100">
-            Project
+            Projects
           </a>
         </Link>
         <Link href="/contact">

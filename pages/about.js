@@ -81,11 +81,10 @@ const About = () => {
               </a>{" "}
               in Morocco.
               <br />I am interested in learning and developing everything
-              related to computer science, with a passion for creating clean
-              code.
-              <br /> Other than coding, I spend most of my free time doing video
-              animation on my youtube channel. 📚 I have also been trying to
-              read more so feel free to reach out to me with any book
+              related to computer science, with a passion for clean code.
+              <br /> Other than coding, I spend most of my free time creating
+              animation videos on my youtube channel. I have also been trying to
+              read more 📚 so feel free to reach out to me with any book
               recommendations!
             </p>
             <div className="">

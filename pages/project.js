@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
+import Title from "../components/Title";
 
 const Project = () => {
   const global = {
@@ -34,12 +35,13 @@ const Project = () => {
         css="sticky top-0 z-10 w-full p-4 bg-sky-600"
         items="px-6 mont inline-block fuchsia hover:text-blue-100"
       />
-      <div className="grid mx-auto w-9/12 mb-12">
+      <div className="grid w-11/12 lg:w-10/12 mx-auto lg:mt-4">
+        <Title>Projects</Title>
         <motion.div
           variants={moveUp}
           initial="hidden"
           animate="show"
-          className="block mt-12 mont border border-gray-100 rounded-xl p-4 leading-10 text-lg text-justify"
+          className="block mt-4 mont border border-gray-100 rounded-xl p-4 leading-10 text-lg text-justify"
         >
           <h1 className="sky-600 text-lg font-bold mont w-full uppercase">
             TradSys
