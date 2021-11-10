@@ -54,6 +54,17 @@ const Project = () => {
             addition, we will try to implement some financial indicators on the
             data to experience with the data a little.
           </p>
+          <div className="flex space-x-6">
+            <p className="font-light text-gray-800 italic bg-blue-100 text-base px-2 rounded-2xl">
+              Python
+            </p>
+            <p className="font-light text-gray-800 italic bg-blue-100 text-base px-2 rounded-2xl">
+              Reactjs
+            </p>
+            <p className="font-light text-gray-800 italic bg-blue-100 text-base px-2 rounded-2xl">
+              Expressjs
+            </p>
+          </div>
           <h1 className="sky-400 mont">Github repositorie:</h1>
           <a
             href="https://github.com/Ben-Fatima/tradSys"
@@ -77,6 +88,17 @@ const Project = () => {
             some need to be done before others, and the goal is to do all of
             theme in one line.
           </p>
+          <div className="flex space-x-6">
+            <p className="font-light text-gray-800 italic bg-blue-100 text-base px-2 rounded-2xl">
+              Python
+            </p>
+            <p className="font-light text-gray-800 italic bg-blue-100 text-base px-2 rounded-2xl">
+              HTML
+            </p>
+            <p className="font-light text-gray-800 italic bg-blue-100 text-base px-2 rounded-2xl">
+              CSS
+            </p>
+          </div>
           <h1 className="sky-400 mont">Github repositorie:</h1>
           <a
             href="https://github.com/Ben-Fatima/jobShopScheduling"
@@ -98,6 +120,14 @@ const Project = () => {
             The same application that you are in now, and its purpose is to
             display the completed projects.
           </p>
+          <div className="flex space-x-6">
+            <p className="font-light text-gray-800 italic bg-blue-100 text-base px-2 rounded-2xl">
+              Nextjs
+            </p>
+            <p className="font-light text-gray-800 italic bg-blue-100 text-base px-2 rounded-2xl">
+              TailwindCss
+            </p>
+          </div>
           <h1 className="sky-400 mont">Github repositorie:</h1>
           <a
             href="https://github.com/Ben-Fatima/Portfolio"
@@ -119,6 +149,14 @@ const Project = () => {
             A conversion of an adobe xd file to a reactjs single page
             application.
           </p>
+          <div className="flex space-x-6">
+            <p className="font-light text-gray-800 italic bg-blue-100 text-base px-2 rounded-2xl">
+              Reactjs
+            </p>
+            <p className="font-light text-gray-800 italic bg-blue-100 text-base px-2 rounded-2xl">
+              TailwindCss
+            </p>
+          </div>
           <h1 className="sky-400 mont">Github repositorie:</h1>
           <a
             href="https://github.com/Ben-Fatima/Single-page"

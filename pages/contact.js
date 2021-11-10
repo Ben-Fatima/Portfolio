@@ -81,7 +81,7 @@ function Form({ setPage }) {
         variants={global}
         initial="hidden"
         animate="show"
-        className="indigo-900"
+        className="indigo-900 w-full"
       >
         <Navbar
           css="sticky top-0 z-10 w-full p-4 bg-sky-600"
