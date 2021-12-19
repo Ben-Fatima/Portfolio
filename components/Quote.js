@@ -1,8 +1,8 @@
 const Quote = () => {
   return (
     <>
-      <p className="quote mt-8 xl:text-xl sky-400">
-        Take every opportunity and make it your best experience!
+      <p className="font-light quote mt-8 xl:text-xl sky-400">
+        You can find me on other social networks using the links below ⬇️ ⬇️
       </p>
     </>
   );
