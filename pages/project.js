@@ -35,7 +35,7 @@ const Project = () => {
         css="sticky top-0 z-10 w-full p-4 bg-sky-600"
         items="px-6 mont inline-block fuchsia hover:text-blue-100"
       />
-      <div className="grid w-11/12 lg:w-10/12 mx-auto lg:mt-4">
+      <div className="grid pb-12 w-11/12 lg:w-10/12 mx-auto lg:mt-4">
         <Title>Projects</Title>
         <motion.div
           variants={moveUp}

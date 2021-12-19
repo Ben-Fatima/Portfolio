@@ -41,7 +41,7 @@ function Skills() {
       <div className="w-11/12 lg:w-10/12 mx-auto mt-6 indigo-900" id="skills">
         <Title value="skills">My skills</Title>
         <div className="pb-4 grid xl:grid-cols-4 md:grid-cols-2 mx-auto mt-4 w-11/12 lg:gap-8">
-          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
+          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-96">
             <div className="w-24 container mx-auto py-4">
               <div className="php w-24 h-24" />
             </div>
@@ -68,7 +68,7 @@ function Skills() {
               </ul>
             </div>
           </div>
-          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
+          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-96">
             <div className="w-24 container mx-auto py-4">
               <div className="node w-24 h-24" />
             </div>
@@ -101,10 +101,19 @@ function Skills() {
                     className="block bg-gold w-24 h-4 my-2 mx-4 rounded-xl"
                   />
                 </div>
+                <div className="">
+                  <li className="flex-grow">Adonisjs</li>
+                  <motion.div
+                    variants={moyen}
+                    initial="begin"
+                    animate="end"
+                    className="block bg-gold w-24 h-4 my-2 mx-4 rounded-xl"
+                  />
+                </div>
               </ul>
             </div>
           </div>
-          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
+          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-96">
             <div className="w-24 container mx-auto py-4">
               <div className="py w-24 h-24" />
             </div>
@@ -131,7 +140,7 @@ function Skills() {
               </ul>
             </div>
           </div>
-          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
+          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-96">
             <div className="w-24 container mx-auto py-4">
               <div className="js w-24 h-24" />
             </div>
@@ -149,7 +158,7 @@ function Skills() {
               </ul>
             </div>
           </div>
-          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
+          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-96">
             <div className="w-24 container mx-auto py-4">
               <div className="html w-24 h-24" />
             </div>
@@ -167,12 +176,21 @@ function Skills() {
               </ul>
             </div>
           </div>
-          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
+          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-96">
             <div className="w-24 container mx-auto py-4">
               <div className="css w-24 h-24" />
             </div>
             <div>
               <ul className=" w-full px-4 mx-auto mont">
+                <div className="">
+                  <li className="flex-grow">CSS3</li>
+                  <motion.div
+                    variants={good}
+                    initial="begin"
+                    animate="end"
+                    className="block bg-sky-100 w-32 h-4 my-2 mx-4 rounded-xl"
+                  />
+                </div>
                 <div className="">
                   <li className="flex-grow">Tailwindcss</li>
                   <motion.div
@@ -185,7 +203,7 @@ function Skills() {
               </ul>
             </div>
           </div>
-          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
+          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-96">
             <div className="w-24 container mx-auto py-4">
               <div className="sql w-24 h-24" />
             </div>
@@ -212,7 +230,7 @@ function Skills() {
               </ul>
             </div>
           </div>
-          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-80">
+          <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-96">
             <div className="w-24 container mx-auto py-4">
               <div className="git w-24 h-24" />
             </div>

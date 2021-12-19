@@ -3,6 +3,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faStackOverflow } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faHackerrank } from "@fortawesome/free-brands-svg-icons";
 const SocialMedia = ({ css }) => {
   return (
     <div className={css}>
@@ -27,6 +28,14 @@ const SocialMedia = ({ css }) => {
           <FontAwesomeIcon
             className="hover:text-yellow-500 cursor-pointer"
             icon={faLinkedin}
+          />
+        </a>
+      </div>
+      <div className="px-10 xl:px-4">
+        <a href="https://www.hackerrank.com/Oresama">
+          <FontAwesomeIcon
+            className="hover:text-yellow-500 cursor-pointer"
+            icon={faHackerrank}
           />
         </a>
       </div>
