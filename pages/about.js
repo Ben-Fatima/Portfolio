@@ -57,7 +57,7 @@ const About = () => {
           <div className="lg:w-3/5">
             <p className="block mont border border-gray-100 rounded-xl p-8 leading-10 text-lg text-justify">
               <p className="text-2xl font-bold text-gray-900 py-4 leading-loose">
-                I'm Fatima zahra, a software engineer graduated from{" "}
+                I&apos;m Fatima zahra, a software engineer graduated from{" "}
                 <a
                   href="http://ensias.um5.ac.ma/"
                   className="font-semibold text-sky-600"
