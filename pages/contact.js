@@ -84,8 +84,8 @@ function Form({ setPage }) {
         className="indigo-900 w-full"
       >
         <Navbar
-          css="sticky top-0 z-10 w-full p-4 bg-sky-600"
-          items="px-6 mont inline-block fuchsia hover:text-blue-100"
+          css="sticky top-0 z-10 w-full p-4 bg-slate-800"
+          items="px-6 mont inline-block hover:text-blue-100"
         />
         <div className="w-11/12 lg:w-10/12 mx-auto mt-6 indigo-900">
           <Title>get in touch</Title>
@@ -95,7 +95,7 @@ function Form({ setPage }) {
             animate="show"
             className="lg:flex mt-4 shadow-lg rounded-xl border border-gray-100 mont"
           >
-            <div className="w-full lg:w-1/3 bg-sky-600 rounded-tl-xl rounded-tr-xl lg:rounded-r-none lg:rounded-l-xl text-white pb-6">
+            <div className="w-full lg:w-1/3 bg-slate-800 rounded-tl-xl rounded-tr-xl lg:rounded-r-none lg:rounded-l-xl text-white pb-6">
               <h2 className="fuchsia text-2xl mont  w-full text-center pt-4">
                 Contact informations
               </h2>
@@ -153,7 +153,7 @@ function Form({ setPage }) {
                     color: "white",
                     backgroundColor: "rgba(218, 167, 0, 0.904)",
                   }}
-                  className="w-full mx-auto bg-gold rounded-3xl px-8 sky-600 mont mt-12 focus:outline-none"
+                  className="w-full mx-auto bg-yellow-400 rounded-3xl px-8 mont mt-12 focus:outline-none"
                   type="submit"
                 >
                   <p className="px-1 inline-block">Send</p>

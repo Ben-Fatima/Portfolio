@@ -38,7 +38,7 @@ function Skills() {
       animate="show"
     >
       <Navbar />
-      <div className="w-11/12 lg:w-10/12 mx-auto mt-6 indigo-900" id="skills">
+      <div className="w-11/12 lg:w-10/12 mx-auto mt-6 font-mono" id="skills">
         <Title value="skills">My skills</Title>
         <div className="pb-4 grid xl:grid-cols-4 md:grid-cols-2 mx-auto mt-4 w-11/12 lg:gap-8">
           <div className="mx-auto mb-4 mont border border-gray-100 rounded-xl shadow w-11/12 h-96">
@@ -50,19 +50,28 @@ function Skills() {
                 <div className="">
                   <li className="flex-grow">PHP</li>
                   <motion.div
-                    variants={moyen}
+                    variants={good}
                     initial="begin"
                     animate="end"
-                    className="block bg-gold w-24 h-4 my-2 mx-4 rounded-xl"
+                    className="block bg-sky-600 w-24 h-4 my-2 mx-4 rounded-xl"
                   />
                 </div>
                 <div className="">
                   <li className="flex-grow">Laravel 8</li>
                   <motion.div
+                    variants={good}
+                    initial="begin"
+                    animate="end"
+                    className="block bg-sky-600 w-24 h-4 my-2 mx-4 rounded-xl"
+                  />
+                </div>
+                <div className="">
+                  <li className="flex-grow">Symfony 5</li>
+                  <motion.div
                     variants={moyen}
                     initial="begin"
                     animate="end"
-                    className="block bg-gold w-24 h-4 my-2 mx-4 rounded-xl"
+                    className="block bg-yellow-400 w-24 h-4 my-2 mx-4 rounded-xl"
                   />
                 </div>
               </ul>
@@ -80,7 +89,7 @@ function Skills() {
                     variants={good}
                     initial="begin"
                     animate="end"
-                    className="block bg-sky-100 w-32 h-4 my-2 mx-4 rounded-xl"
+                    className="block bg-sky-600 w-32 h-4 my-2 mx-4 rounded-xl"
                   />
                 </div>
                 <div className="">
@@ -89,7 +98,7 @@ function Skills() {
                     variants={moyen}
                     initial="begin"
                     animate="end"
-                    className="block bg-gold w-24 h-4 my-2 mx-4 rounded-xl"
+                    className="block bg-yellow-400 w-24 h-4 my-2 mx-4 rounded-xl"
                   />
                 </div>
                 <div className="">
@@ -98,16 +107,7 @@ function Skills() {
                     variants={moyen}
                     initial="begin"
                     animate="end"
-                    className="block bg-gold w-24 h-4 my-2 mx-4 rounded-xl"
-                  />
-                </div>
-                <div className="">
-                  <li className="flex-grow">Adonisjs</li>
-                  <motion.div
-                    variants={moyen}
-                    initial="begin"
-                    animate="end"
-                    className="block bg-gold w-24 h-4 my-2 mx-4 rounded-xl"
+                    className="block bg-yellow-400 w-24 h-4 my-2 mx-4 rounded-xl"
                   />
                 </div>
               </ul>
@@ -125,7 +125,7 @@ function Skills() {
                     variants={good}
                     initial="begin"
                     animate="end"
-                    className="block bg-sky-100 w-32 h-4 my-2 mx-4 rounded-xl"
+                    className="block bg-sky-600 w-32 h-4 my-2 mx-4 rounded-xl"
                   />
                 </div>
                 <div className="">
@@ -134,7 +134,7 @@ function Skills() {
                     variants={moyen}
                     initial="begin"
                     animate="end"
-                    className="block bg-gold w-24 h-4 my-2 mx-4 rounded-xl"
+                    className="block bg-yellow-400 w-24 h-4 my-2 mx-4 rounded-xl"
                   />
                 </div>
               </ul>
@@ -152,7 +152,16 @@ function Skills() {
                     variants={good}
                     initial="begin"
                     animate="end"
-                    className="block bg-sky-100 w-32 h-4 my-2 mx-4 rounded-xl"
+                    className="block bg-sky-600 w-32 h-4 my-2 mx-4 rounded-xl"
+                  />
+                </div>
+                <div className="">
+                  <li className="flex-grow">Typescript</li>
+                  <motion.div
+                    variants={moyen}
+                    initial="begin"
+                    animate="end"
+                    className="block bg-yellow-400 w-32 h-4 my-2 mx-4 rounded-xl"
                   />
                 </div>
               </ul>
@@ -170,7 +179,25 @@ function Skills() {
                     variants={good}
                     initial="begin"
                     animate="end"
-                    className="block bg-sky-100 w-32 h-4 my-2 mx-4 rounded-xl"
+                    className="block bg-sky-600 w-32 h-4 my-2 mx-4 rounded-xl"
+                  />
+                </div>
+                <div className="">
+                  <li className="flex-grow">Blade</li>
+                  <motion.div
+                    variants={good}
+                    initial="begin"
+                    animate="end"
+                    className="block bg-sky-600 w-32 h-4 my-2 mx-4 rounded-xl"
+                  />
+                </div>
+                <div className="">
+                  <li className="flex-grow">Twing</li>
+                  <motion.div
+                    variants={moyen}
+                    initial="begin"
+                    animate="end"
+                    className="block bg-yellow-400 w-32 h-4 my-2 mx-4 rounded-xl"
                   />
                 </div>
               </ul>
@@ -188,7 +215,7 @@ function Skills() {
                     variants={good}
                     initial="begin"
                     animate="end"
-                    className="block bg-sky-100 w-32 h-4 my-2 mx-4 rounded-xl"
+                    className="block bg-sky-600 w-32 h-4 my-2 mx-4 rounded-xl"
                   />
                 </div>
                 <div className="">
@@ -197,7 +224,7 @@ function Skills() {
                     variants={good}
                     initial="begin"
                     animate="end"
-                    className="block bg-sky-100 w-32 h-4 my-2 mx-4 rounded-xl"
+                    className="block bg-sky-600 w-32 h-4 my-2 mx-4 rounded-xl"
                   />
                 </div>
               </ul>
@@ -215,7 +242,7 @@ function Skills() {
                     variants={good}
                     initial="begin"
                     animate="end"
-                    className="block bg-sky-100 w-32 h-4 my-2 mx-4 rounded-xl"
+                    className="block bg-sky-600 w-32 h-4 my-2 mx-4 rounded-xl"
                   />
                 </div>
                 <div className="">
@@ -224,7 +251,7 @@ function Skills() {
                     variants={good}
                     initial="begin"
                     animate="end"
-                    className="block bg-sky-100 w-32 h-4 my-2 mx-4 rounded-xl"
+                    className="block bg-sky-600 w-32 h-4 my-2 mx-4 rounded-xl"
                   />
                 </div>
               </ul>
@@ -239,10 +266,28 @@ function Skills() {
                 <div className="">
                   <li className="flex-grow">Git</li>
                   <motion.div
+                    variants={good}
+                    initial="begin"
+                    animate="end"
+                    className="block bg-sky-600 w-24 h-4 my-2 mx-4 rounded-xl"
+                  />
+                </div>
+                <div className="">
+                  <li className="flex-grow">Docker</li>
+                  <motion.div
                     variants={moyen}
                     initial="begin"
                     animate="end"
-                    className="block bg-gold w-24 h-4 my-2 mx-4 rounded-xl"
+                    className="block bg-yellow-400 w-24 h-4 my-2 mx-4 rounded-xl"
+                  />
+                </div>
+                <div className="">
+                  <li className="flex-grow">Vercel</li>
+                  <motion.div
+                    variants={moyen}
+                    initial="begin"
+                    animate="end"
+                    className="block bg-yellow-400 w-24 h-4 my-2 mx-4 rounded-xl"
                   />
                 </div>
               </ul>

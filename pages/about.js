@@ -56,42 +56,35 @@ const About = () => {
           </div>
           <div className="lg:w-3/5">
             <p className="block mont border border-gray-100 rounded-xl p-8 leading-10 text-lg text-justify">
-              Hello again!
-              <motion.div
-                className="inline-block cursor-pointer px-2"
-                animate={{
-                  scale: [1, 2, 1],
-                  rotate: [0, 0, 70, 70, 0],
-                }}
-                transition={{
-                  duration: 1,
-                  ease: "easeInOut",
-                  repeatDelay: 1,
-                }}
-                whileHover={{
-                  scale: [1, 2, 1],
-                  rotate: [0, 0, 70, 70, 0],
-                }}
-              >
-                👋
-              </motion.div>
-              <br />I am Fatima Zahra a computer science engineering student at
-              <a
-                href="http://ensias.um5.ac.ma/"
-                className="font-semibold sky-200"
-              >
-                {" "}
-                ENSIAS
-              </a>{" "}
-              in Morocco.
-              <br />I am interested in learning and developing everything
-              related to computer science, with a passion for clean code. I also
-              participate in many competitive programming like CodeJam,
-              kickstart, codeforces and hackerRank.
-              <br /> Other than coding, I spend most of my free time creating
-              animation videos on my youtube channel. I have also been trying to
-              read more 📚 so feel free to reach out to me with any book
-              recommendations!
+              <p className="text-2xl font-bold text-gray-900 py-4 leading-loose">
+                I&apos;m Fatima zahra, a software engineer graduated from{" "}
+                <a
+                  href="http://ensias.um5.ac.ma/"
+                  className="font-semibold text-sky-600"
+                >
+                  ENSIAS
+                </a>
+                .
+              </p>
+              I am interested in learning and developing everything related to
+              computer science, with a passion for clean code. I also
+              participate in many competitive programming contests with the
+              passion to be a champion one day 😜.
+              <p className="pt-6">
+                Other than coding, I like to spend my free time learning video
+                editing and creating animations, I also like to play{" "}
+                <a
+                  href="https://www.chess.com/member/oressama"
+                  className="font-semibold text-sky-600"
+                >
+                  Chess♛
+                </a>
+                .
+              </p>
+              <p className="pt-6">
+                I have also been trying to read more 📚 so feel free to reach
+                out to me with any book recommendations!
+              </p>
             </p>
             <div className="w-full">
               <a className="w-full" href="/resume.pdf" download>
@@ -100,7 +93,7 @@ const About = () => {
                     boxShadow: "0px 0px 12px rgb(255,255,255)",
                     backgroundColor: "rgb(17, 46, 58)",
                   }}
-                  className="w-full lg:w-1/2 bg-sky-600 py-2 px-4 rounded-3xl text-white mont mt-12 focus:outline-none"
+                  className="w-full lg:w-1/2 bg-yellow-400 py-2 px-4 rounded-3xl text-slate-800 mont mt-12 focus:outline-none hover:text-gray-100"
                 >
                   <p className="inline-block">Download resume</p>
                   <div className="px-1 inline-block">
