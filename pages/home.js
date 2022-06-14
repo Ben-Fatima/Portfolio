@@ -31,7 +31,7 @@ const Leading = () => {
                 color: "white",
                 backgroundColor: "rgba(218, 167, 0, 0.904)",
               }}
-              className="w-11/12 lg:w-1/2 bg-gold py-2 px-4 rounded-3xl sky-600 mont mt-12 focus:outline-none"
+              className="w-11/12 lg:w-1/2 bg-yellow-400 py-2 px-4 rounded-3xl text-slate-900 mt-12 focus:outline-none"
             >
               <Link href="/contact">
                 <a>
