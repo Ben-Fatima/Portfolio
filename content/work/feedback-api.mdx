@@ -1,0 +1,58 @@
+export const metadata = {
+  title: 'Feedback API',
+  summary: 'A zero-dependency Node.js HTTP API: input hardening and a fixed-window rate limiter, verified with a real request flood.',
+  stack: ['Node.js', 'HTTP', 'ESM', 'Security']
+};
+
+# Feedback API
+
+A small Node.js service with no dependencies at all, plain `http`, ESM modules.
+It collects product feedback on `POST /api/feedback` and ships a browser form
+that displays whatever the API answers, including errors.
+
+## Problem
+
+The endpoint accepted anything. Two different gaps, found separately:
+
+1. **Validation did not exist.** Oversized bodies, malformed JSON, arbitrary
+   vote values, multi-KB comments, everything was parsed and stored. Raw user
+   text also went straight into logs, so a comment could inject fake log lines.
+2. **Nothing counted requests.** Even after validation was added, a client
+   could send the same valid request ten thousand times. Every check guarded
+   *what a request contained*, none guarded *how many arrived*.
+
+## Design
+
+**A validation wall.** Reject oversized bodies early (`413`), fail malformed
+JSON cleanly (`400`), allow-list the vote to `-1 | 0 | 1`, cap comment length,
+and log structured JSON with the IP read from the socket, never from the
+payload.
+
+**A fixed-window limiter.** Five requests per ten seconds per client IP, kept
+in an in-memory `Map`. The check runs *before* the body is read, so floods are
+rejected cheaply. The answer is `429` with `Retry-After: 10`.
+
+## Result
+
+The same eight-request flood, before and after:
+
+```
+before: 200 200 200 200 200 200 200 200
+after:  200 200 200 200 200 429 429 429
+```
+
+The browser form reports the block itself: `Error 429: Too many requests`.
+
+## What I would change, and the honest limits
+
+- The counter lives in memory, so it only protects one process. A
+  multi-instance deployment needs a shared store (Redis).
+- A fixed window allows a burst at the window edge; a sliding window or token
+  bucket closes that.
+- IP-based keys punish shared networks, a real product would need a better
+  identity signal.
+
+Each fix lives as a before/after branch pair:
+`task/input-hardening` → `solution/input-hardening`,
+`task/rate-limit` → `solution/rate-limit`, and `ratelimit-check.txt` in the
+repo replays the flood.

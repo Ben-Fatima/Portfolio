@@ -1,0 +1,63 @@
+export const metadata = {
+  title: 'FileImporter',
+  summary: 'A chunked CSV importer that streams million-row files, with two measured fixes: a memory crash and slow deep pages.',
+  stack: ['PHP 8', 'SQLite', 'Streaming', 'Keyset pagination']
+};
+
+# FileImporter
+
+A small PHP + SQLite app that imports large CSV product files. Uploads arrive
+in chunks, and each request to the import endpoint processes 1,000 rows, saves
+its position, and lets the next request continue. The browser drives the calls
+until the import reports done.
+
+## Problem
+
+Two bugs hid inside what looked like a working design:
+
+1. **The "chunked" import still ran out of memory.** Importing a 43 MB /
+   1.2M-row CSV crashed with `Allowed memory size exhausted`, even though
+   each request only processed 1,000 rows.
+2. **Deep pages got slower the further you paged.** Page 1 of the products
+   list answered instantly; page 20,000 made you wait, same 50-row page.
+
+## Root causes
+
+**Memory.** The 1,000-row limit was per request, but `file($path)` loaded all
+1.2M lines into an array *before* slicing out the chunk. Memory grew with the
+file size, not the chunk size. The chunking was cosmetic.
+
+**Pagination.** `OFFSET N` does not skip ahead cheaply. It tells the database
+to read N+50 rows and throw the first N away. The deeper the page, the more
+work gets discarded.
+
+## Design
+
+**Streaming reads.** `fopen` the file, `fseek` to the saved byte position,
+`fgetcsv` one row at a time. After each chunk, `ftell` gives the exact byte
+position and it is saved as the resume checkpoint.
+
+**Keyset pagination.** Instead of `LIMIT 50 OFFSET N`, the query asks for
+`WHERE id > :after ORDER BY id LIMIT 50`. The primary-key index jumps straight
+to the next page. The Next link carries the last row's id as its cursor,
+`?after=1000050`, so each page hands the next one exactly what it needs.
+
+## Result
+
+| | Before | After |
+|---|---|---|
+| Peak memory (43 MB file, 1.2M rows) | 157 MB | **2 MB** |
+| Deep-page query | read + discard ~1M rows | index seek to `id >` |
+
+Verification files ship in the repo (`memory-check.txt`, `pagination-check.txt`),
+and the numbers are reproducible. Each fix lives as a before/after branch
+pair: `memory/start` → `solution/streaming-import`,
+`task/keyset-start` → `solution/keyset-pagination`.
+
+## What I would change
+
+- Keyset cannot go backwards, so a small stack of past cursors would restore a
+  real Previous link.
+- The import progress is byte-based; a row-count progress bar would be easier
+  to reason about for users.
+- Expose the cursor in a JSON API too, so API clients get the same speed.

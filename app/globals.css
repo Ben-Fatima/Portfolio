@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Dark-only theme (v1 decision; OS-preference toggle later if wanted).
+   GitHub-dark-style muted base, not pure black — easier on the eyes for
+   long-form reading. */
+:root {
+  --background: #0d1117;
+  --surface: #161b22;
+  --foreground: #e6edf3;
+  --muted: #9198a1;
+  --border: #30363d;
+  --accent: #56d364;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--background);
+}
+
+/* Long-form case-study typography: ~65-75ch measure, mono headings,
+   generous vertical rhythm. */
+.prose {
+  --tw-prose-body: var(--muted);
+  --tw-prose-headings: var(--foreground);
+  --tw-prose-lead: var(--foreground);
+  --tw-prose-links: var(--accent);
+  --tw-prose-bold: var(--foreground);
+  --tw-prose-counters: var(--muted);
+  --tw-prose-bullets: var(--border);
+  --tw-prose-hr: var(--border);
+  --tw-prose-quotes: var(--foreground);
+  --tw-prose-quote-borders: var(--accent);
+  --tw-prose-captions: var(--muted);
+  --tw-prose-code: var(--accent);
+  --tw-prose-pre-code: var(--foreground);
+  --tw-prose-pre-bg: var(--surface);
+  --tw-prose-th-borders: var(--border);
+  --tw-prose-td-borders: var(--border);
+  max-width: 68ch;
+}
+
+.prose :where(h1, h2, h3, h4) {
+  font-family: var(--font-geist-mono), monospace;
+  letter-spacing: -0.02em;
+}
+
+.prose :where(a) {
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.prose :where(a):hover {
+  border-bottom-color: var(--accent);
+}

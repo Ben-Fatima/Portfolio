@@ -1,0 +1,59 @@
+export const metadata = {
+  title: 'Stock Tracker',
+  summary: 'Event-sourced inventory: immutable movements, stock levels derived from the event log, plus a measured N+1 fix.',
+  stack: ['PHP 8', 'Lumen', 'SQLite', 'REST API', 'CLI']
+};
+
+# Stock Tracker
+
+An inventory system built on a simple rule: **movements are the data, stock is
+a view.** Every change is an immutable `IN` / `OUT` / `ADJUST` movement row;
+stock on hand is computed from the log, never stored as mutable state. A Lumen
+REST API is the source of truth, and a PHP CLI talks to it.
+
+## Problem
+
+`GET /movements` returned the right data, but the list endpoint silently ran
+extra queries *per row* to fetch each movement's product and location. Nothing
+looked wrong in the output. The only symptom was the query count growing with
+the list.
+
+## Root cause
+
+The row-enrichment loop touched `$movement->product` and `$movement->location`
+on every row. With lazy loading, each access fires a query: for 31 movements,
+that is 1 list query + 31 product queries + 31 location queries = **64 queries**
+for one page.
+
+## Design decisions
+
+- **Events, not state.** Derived stock costs a fold over movements but kills a
+  whole class of consistency bugs: there is no "stock row" to go stale or race.
+- **Eager loading for the list.** One line, `with(['product', 'location'])`,
+  collapses the per-row queries into two batch loads.
+- **Threshold-crossing alerts.** `OUT` movements that push a product below its
+  minimum trigger an email, but only on the *crossing*, not on every sale
+  while it stays low. One meaningful signal, not spam.
+
+## Result
+
+Measured with `nplus1-check.php` in the repo, it runs the controller's list
+code twice, lazy and eager, and counts queries:
+
+```
+GET /movements, 31 rows
+  lazy:  64 queries
+  eager: 4 queries
+```
+
+## What I would change
+
+- Stock reads could get a materialized table with the event log kept as the
+  audit trail, so reads stop paying the fold cost.
+- The alert is synchronous with the movement write; a queue would isolate
+  email latency and failures.
+- `nplus1-check.php` measures a fixed page of 50, a parametrized version
+  would show the growth curve directly.
+
+The before/after lives on `nplus1/start` → `nplus1/solution`, and the repo
+ships the seeded demo database so the measurement runs out of the box.
