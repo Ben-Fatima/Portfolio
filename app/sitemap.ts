@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import fs from 'node:fs';
 import path from 'node:path';
 
-const BASE = 'https://fatimazahra.dev';
+const BASE = 'https://www.fatimazahra.dev';
 const CONTENT_DIR = path.join(process.cwd(), 'content/work');
 
 export default function sitemap(): MetadataRoute.Sitemap {

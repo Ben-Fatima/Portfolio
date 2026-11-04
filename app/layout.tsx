@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://fatimazahra.dev'),
+  metadataBase: new URL('https://www.fatimazahra.dev'),
   title: {
     default: `${profile.name} | ${profile.role}`,
     template: `%s | ${profile.name}`
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${profile.name} | ${profile.role}`,
     description: profile.tagline,
-    url: 'https://fatimazahra.dev',
+    url: 'https://www.fatimazahra.dev',
     siteName: profile.name,
     type: 'website'
   },
@@ -44,7 +44,7 @@ const personJsonLd = {
   name: profile.name,
   jobTitle: profile.role,
   email: links.email,
-  url: 'https://fatimazahra.dev',
+  url: 'https://www.fatimazahra.dev',
   sameAs: [links.github, links.linkedin]
 };
 
