@@ -31,6 +31,8 @@ export type CaseStudyMeta = {
   title: string;
   summary: string;
   stack: string[];
+  repo?: string;
+  live?: string;
 };
 
 // Ordered index for the homepage, personal projects only; professional

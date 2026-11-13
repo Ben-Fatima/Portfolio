@@ -7,33 +7,39 @@ export const work: WorkEntry[] = [
     title: 'Stock Tracker',
     summary:
       'Event-sourced inventory: immutable movements, stock levels derived from the event log, REST API + CLI.',
-    stack: ['PHP 8.3', 'SQLite', 'REST']
+    stack: ['PHP 8.3', 'SQLite', 'REST'],
+    repo: 'https://github.com/Ben-Fatima/stock-tracker'
   },
   {
     slug: 'file-importer',
     title: 'FileImporter',
     summary:
       'Chunked CSV importer that streams million-row files: memory stayed flat at 2 MB where the naive version needed 157.',
-    stack: ['PHP 8', 'SQLite', 'Streaming']
+    stack: ['PHP 8', 'SQLite', 'Streaming'],
+    repo: 'https://github.com/Ben-Fatima/file-importer'
   },
   {
     slug: 'feedback-api',
     title: 'Feedback API',
     summary:
       'Zero-dependency Node.js HTTP API: input hardening and a fixed-window rate limiter, verified with a real request flood.',
-    stack: ['Node.js', 'HTTP', 'Security']
+    stack: ['Node.js', 'HTTP', 'Security'],
+    repo: 'https://github.com/Ben-Fatima/feedback-api'
   },
   {
     slug: 'fikrify',
     title: 'Fikrify',
-    summary: 'A shipped product, idea to deployed on its own domain.',
-    stack: ['Laravel', 'Livewire', 'Vercel']
+    summary:
+      'AI content-plan generator for TikTok, Reels & Shorts: 7-day calendars with hooks, captions and posting times. Plans share via compressed URLs.',
+    stack: ['Next.js', 'TypeScript', 'OpenAI'],
+    live: 'https://fikrify.io'
   },
   {
     slug: 'resume-tool',
     title: 'Resume Tool',
     summary:
       'A data-driven resume app: typed data files render the CV, dual-locale, headless PDF generation.',
-    stack: ['Next.js', 'TypeScript', 'Tailwind']
+    stack: ['Next.js', 'TypeScript', 'Tailwind'],
+    repo: 'https://github.com/Ben-Fatima/Resume'
   }
 ];

@@ -70,6 +70,26 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             ))}
           </ul>
         )}
+        {metadata?.repo && (
+          <a
+            href={metadata.repo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-block font-mono text-xs text-muted transition-colors hover:text-accent"
+          >
+            view on github ↗
+          </a>
+        )}
+        {metadata?.live && (
+          <a
+            href={metadata.live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 ml-4 inline-block font-mono text-xs text-muted transition-colors hover:text-accent"
+          >
+            live ↗
+          </a>
+        )}
       </header>
 
       <article className="prose prose-invert mt-10">
