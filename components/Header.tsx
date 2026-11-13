@@ -44,7 +44,7 @@ export function Header() {
             rel="noopener noreferrer"
             className="rounded-md border border-accent/40 px-3 py-1.5 font-mono text-xs font-medium text-accent transition-colors hover:bg-accent hover:text-background"
           >
-            cv.pdf
+            cv ↗
           </a>
         </nav>
       </div>

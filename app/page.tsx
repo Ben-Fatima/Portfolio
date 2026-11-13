@@ -30,7 +30,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="rounded-md bg-accent px-4 py-2 font-mono text-sm font-semibold text-background transition-opacity hover:opacity-90"
           >
-            Download CV
+            View CV ↗
           </a>
           <a
             href={links.github}
